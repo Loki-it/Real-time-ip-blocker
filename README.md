@@ -15,9 +15,13 @@ Lo script analizzerà in tempo reale ogni singolo ip e bloccherà gli ip che inv
 - Screen
 - Scapy
 
-### Configurazione 🔧
+### Installazione e configurazione 🔧
 
-- sudo apt-get install screen scapy 
+- sudo apt-get install scapy 
+- modifica config.json impostando la scheda di rete del tuo server (default: eth0)
+
+### Avvio 🔧
+
 - screen -S firewall python3 main.py
 
 ### Test Effettuati ✅
@@ -29,6 +33,8 @@ Lo script analizzerà in tempo reale ogni singolo ip e bloccherà gli ip che inv
 
 Lo script è stato creato per bloccare un numero limitato di ip, non è adatto per attacchi massivi.
 Il dover bloccare un attacco massivo potrebbe rallentare molto l'host e lo stesso vale sull'avere migliaia di ip nelle iptables  
+
+---
 
 ### Immagine dimostrativa
 
