@@ -1,0 +1,5 @@
+{
+    "TCP_PPS_LIMIT": 20,
+    "UDP_PPS_LIMIT": 100,
+    "INTERFACE": "eth0"
+}
