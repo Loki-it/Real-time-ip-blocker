@@ -4,7 +4,6 @@ import subprocess
 import time
 from collections import defaultdict
 
-# Carica le configurazioni da un file JSON
 with open('config.json', 'r') as file:
     config = json.load(file)
 
@@ -47,13 +46,11 @@ def reset_counts():
 
 if __name__ == "__main__":
     try:
-        # Avvia un thread separato per resettare i conteggi ogni secondo
         import threading
         reset_thread = threading.Thread(target=reset_counts)
         reset_thread.daemon = True
         reset_thread.start()
 
-        # Avvia il monitoraggio dei pacchetti
         sniff(iface=INTERFACE, prn=packet_callback, filter="ip", store=0)
 
     except KeyboardInterrupt:
